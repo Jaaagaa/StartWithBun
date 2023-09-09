@@ -2,10 +2,19 @@
   "name": "firstbun",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "clean": "rm -rf dist && echo 'Done.'",
+    "dev": "bun index.ts"
+  },
   "devDependencies": {
     "bun-types": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@elysiajs/html": "^0.6.4",
+    "elysia": "^0.6.20",
+    "figlet": "^1.6.0"
   }
 }

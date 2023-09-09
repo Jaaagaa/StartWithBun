@@ -1,10 +1,10 @@
-const server = Bun.serve({
-	port:3000,
-	fetch(request){
-		return new Response("welcome to Bun");
-	},
+import { Elysia } from 'elysia';
+import { User } from './app/Routes/user';
 
-});
+const app = new Elysia();
 
-console.log(`Listening on localhost:${server.port}`);
+app.get("/", User);
 
+app.listen(Bun.env.PORT ?? 3000);
+
+console.log(`🦊 Elysia is running at on port ${app.server.port}....`)

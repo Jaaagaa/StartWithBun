@@ -1,5 +1,11 @@
 # firstbun
 
+To install bun
+
+```bash
+npm i bun -g
+```
+
 To install dependencies:
 
 ```bash
